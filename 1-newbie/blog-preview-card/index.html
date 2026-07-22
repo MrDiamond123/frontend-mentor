@@ -1,34 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
   <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* styles from the style guide */
+    :root {
+      --color-yellow: hsl(47, 88%, 63%);
+      --color-white: hsl(0, 0%, 100%);
+
+      --color-gray-500: hsl(0, 0%, 42%);
+      --color-gray-950: hsl(0, 0%, 7%);
+
+      --font-medium: 500;
+      --font-extrabold: 800;
+
+    }
+
+    body {
+      background-color: var(--color-yellow);
+      font-family: 'Figtree', sans-serif;
+      height: 100dvh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 1rem;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+
+      background-color: var(--color-white);
+      padding: 24px;
+
+      border: 1px solid black;
+      border-radius: 24px;
+
+      width: 75%;
+      max-width: 320px;
+
+      box-shadow: 10px 10px 0px 0px var(--color-gray-950);
+
+      a {
+        text-decoration: none;
+
+        &:focus .blog-card-title {
+          color: var(--color-yellow);
+        }
+
+        &:hover .blog-card-title {
+          color: var(--color-yellow);
+        }
+      }
+    }
+
+    .blog-card-image {
+      border-radius: 10px;
+
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-card-tag {
+      width: fit-content;
+      margin: 24px 0 16px 0;
+      padding: 6px 12px;
+
+      background-color: var(--color-yellow);
+      color: var(--color-gray-950);
+
+      font-weight: var(--font-extrabold);
+      border-radius: 4px;
+    }
+
+    .blog-card-pubdate {
+      color: var(--color-gray-950);
+      font-weight: var(--font-medium);
+    }
+
+    .blog-card-title {
+      font-weight: var(--font-extrabold);
+      color: var(--color-gray-950);
+    }
+
+
+    .blog-card-summary {
+      font-size: 16px;
+      color: var(--color-gray-500);
+      font-weight: var(--font-medium);
+
+      line-height: 24px;
+
+    }
+
+    .blog-card-author {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      color: var(--color-gray-950);
+      font-weight: var(--font-extrabold);
+
+      img {
+        width: 32px;
+      }
+    }
+
+    /* attribution */
+
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Learning
+  <article class="blog-card">
+    <a href="#">
+      <img class="blog-card-image" src="assets/images/illustration-article.svg" alt="">
 
-  Published 21 Dec 2023
+      <div class="blog-card-tag">Learning</div>
+      <div class="blog-card-pubdate">Published 21 Dec 2023</div>
+      <h2 class="blog-card-title">HTML & CSS foundations</h2>
 
-  HTML & CSS foundations
+      <p class="blog-card-summary">These languages are the backbone of every website, defining structure, content, and
+        presentation.</p>
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+      <div class="blog-card-author">
+        <img src="assets/images/image-avatar.webp" alt="">
+        <span>Greg Hooper</span>
+      </div>
+    </a>
 
-  Greg Hooper
-  
+
+  </article>
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Kurtis O'Donnell</a>.
   </footer>
 </body>
+
 </html>
