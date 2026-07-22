@@ -46,4 +46,4 @@ I used Kimi K3 in OpenCode for code review and to nudge me in the correct direct
 ## Author
 
 - Website - [Kurtis O'Donnell](https://kurtisodonnell.rocks)
-- Frontend Mentor - [@diamondmcpro](https://www.frontendmentor.io/profile/diamondmcpro)
+- Frontend Mentor - [@mrdiamond123](https://www.frontendmentor.io/profile/mrdiamond123)
